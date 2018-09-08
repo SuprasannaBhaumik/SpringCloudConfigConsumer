@@ -5,8 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Controller
+@RequestScope
+//adding request scope will help to
+//automatically refresh the bean with the updated values
 public class ConsumerController {
 	
 	@Value("${name}")
